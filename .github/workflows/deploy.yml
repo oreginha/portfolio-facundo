@@ -20,7 +20,4 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy to Railway
-        uses: railwayapp/railway-deploy-action@v2.0.0
-        with:
-          railwayToken: ${{ secrets.RAILWAY_TOKEN }}
-          projectId: ${{ secrets.RAILWAY_PROJECT_ID }}
+        run: npx railway deploy --service portfolio-facundo-web --token ${{ secrets.RAILWAY_TOKEN }} --project ${{ secrets.RAILWAY_PROJECT_ID }}
