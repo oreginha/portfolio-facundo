@@ -16,7 +16,12 @@ export default defineConfig({
   },
   preview: {
     port: parseInt(process.env.PORT || '4173'),
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    allowedHosts: [
+      'portfolio-facundo-web-production.up.railway.app',
+      '.railway.app',
+      'localhost'
+    ]
   },
   build: {
     outDir: 'dist',
